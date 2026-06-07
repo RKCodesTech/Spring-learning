@@ -7,9 +7,11 @@
        https://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="StdId" class="com.sp.beans.Student">
+
         <property name="name" value="Riya"/>
-        <property name="rollno" value="98765"/>
         <property name="email" value="riya123@gmail.com"/>
+        <property name="rollno" value="1"/>
+
     </bean>
 
 </beans>

@@ -9,10 +9,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String config_loc = "src/main/resources/ApplicationContext.xml";
+       
 
         ApplicationContext context =
-                new ClassPathXmlApplicationContext("ApplicationContext.xml");
+                new ClassPathXmlApplicationContext("ApplicationContext.xml");//direct file name in bracket instead of writing address here
 
         Student s = (Student) context.getBean("StdId");
 
