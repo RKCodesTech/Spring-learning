@@ -16,6 +16,7 @@ public Student obj1(){
 	return std;
 
 }
+
 @Bean("StdId2")
 public Student obj2() {
 	Student std1= new Student();
