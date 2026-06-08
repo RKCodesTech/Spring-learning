@@ -14,7 +14,9 @@ public class Main {
                 new AnnotationConfigApplicationContext(SpringConfigfile.class);
 
         Student std = (Student) context.getBean("StdId1");
-
         std.display();
+        Student std1= (Student) context.getBean("StdId2");
+        std1.display();
+      
     }
 }
