@@ -15,7 +15,10 @@ public class Main {
                 new ClassPathXmlApplicationContext("ApplicationContext.xml");//direct file name in bracket instead of writing address here
 
         Student s = (Student) context.getBean("StdId");
+        
 
         s.display();
+        Student s1= (Student) context.getBean("StdId1");
+        s1.display();
     }
 }
