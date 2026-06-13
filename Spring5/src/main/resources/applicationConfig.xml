@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jee="http://www.springframework.org/schema/jee"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           https://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/jee
+           https://www.springframework.org/schema/jee/spring-jee.xsd">
+
+    <!-- Scan all classes in this package -->
+<context:component-scan base-package="in.sp.beans"></context:component-scan>
+
+<bean class= "in.sp.beans.Address" id="adrId">
+ <property name="houseno" value ="111"/>
+  <property name="city" value ="inodre"/>
+   <property name="pincode" value ="12334"/>
+</bean>
+ 
+ <bean class="in.sp.beans.Student " id="stdId" >
+ <property name="name" value ="Ria"/>
+  <property name="rollno" value ="Ria"/>
+   <property name="address" ref ="adrId"/>    <!-- using ref attribute u can inject another object.. -->
+ </bean>
+
+</beans>
