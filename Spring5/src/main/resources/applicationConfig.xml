@@ -14,17 +14,15 @@
 
     <!-- Scan all classes in this package -->
 <context:component-scan base-package="in.sp.beans"></context:component-scan>
-
-<bean class= "in.sp.beans.Address" id="adrId">
- <property name="houseno" value ="111"/>
-  <property name="city" value ="inodre"/>
-   <property name="pincode" value ="12334"/>
+<bean class="in.sp.beans.Address" id="adrId">
+    <property name="houseno" value="111"/>
+    <property name="city" value="Indore"/>
+    <property name="pincode" value="12334"/>
 </bean>
- 
- <bean class="in.sp.beans.Student " id="stdId" >
- <property name="name" value ="Ria"/>
-  <property name="rollno" value ="Ria"/>
-   <property name="address" ref ="adrId"/>    <!-- using ref attribute u can inject another object.. -->
- </bean>
 
+<bean class="in.sp.beans.Student" id="stdId">
+    <property name="name" value="Ria"/>
+    <property name="rollno" value="101"/>
+    <property name="address" ref="adrId"/>
+</bean>
 </beans>
