@@ -16,6 +16,6 @@ public void setAddress(Address address) {
 public void display() {
 	System.out.println("Name: "+name);
 	System.out.println("rollno: "+rollno);
-	System.out.println("address: "+address.toString());
+	System.out.println("address: "+address);
 }
 }

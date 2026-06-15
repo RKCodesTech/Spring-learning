@@ -1,3 +1,4 @@
+
 package in.sp.beans;
 
 public class Address {
@@ -14,4 +15,11 @@ public void setPincode(int pincode) {
 	this.pincode = pincode;
 }
 
+@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "houseNo." +houseno+
+		", CityName " +cityname+
+	 ", pincode " +pincode;
+	}
 }
