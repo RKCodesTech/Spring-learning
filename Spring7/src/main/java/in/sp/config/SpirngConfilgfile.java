@@ -16,7 +16,7 @@ public class SpirngConfilgfile {
 	public Student Stdobj() {
 		Student std= new Student();
 		std.setName("Riya Kosta");
-		std.setAge("19");
+		std.setAge(19);
 		std.setAddress(Adrobj());  //injected object of address class here
 		return std;
 	}
