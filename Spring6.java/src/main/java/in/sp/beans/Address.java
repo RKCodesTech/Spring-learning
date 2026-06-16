@@ -11,6 +11,7 @@ public Address(int houseno ,String cityname, int pincode) {
 	this.cityname=cityname;
 	this.pincode=pincode;
 }
+// to print object output into string form
 
 @Override
 	public String toString() {
