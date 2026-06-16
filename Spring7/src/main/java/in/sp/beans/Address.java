@@ -9,5 +9,10 @@ public void setCityname(String cityname) {
 public void setHouseno(String houseno) {
 	this.houseno = houseno;
 }
+@Override
+	public String toString() {
+		// TODO Auto-generated method stub     
+		return "cityName"+cityname +", houseNo" +houseno; // it will convert object type o/p like this Address: in.sp.beans.Address@78691363 into string form
+	}
 
 }
