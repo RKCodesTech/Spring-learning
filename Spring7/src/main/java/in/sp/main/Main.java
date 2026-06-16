@@ -1,5 +1,14 @@
 package in.sp.main;
 
-public class Main {
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import in.sp.beans.Student;
+
+public class Main {
+public static void main (String[] args) {
+	ApplicationContext context =new AnnotationConfigApplicationContext("SpringConfigfile");
+	Student std =(Student) context.getBean(Student.class);
+	std.display();
+}
 }
