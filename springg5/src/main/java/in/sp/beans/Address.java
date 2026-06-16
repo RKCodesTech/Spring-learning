@@ -15,6 +15,7 @@ public void setPincode(int pincode) {
 	this.pincode = pincode;
 }
 
+// to convert object o/p into string
 @Override
 	public String toString() {
 		// TODO Auto-generated method stub
