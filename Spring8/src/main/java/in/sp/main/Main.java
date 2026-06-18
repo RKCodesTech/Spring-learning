@@ -10,7 +10,7 @@ public class Main {
 		
 		ApplicationContext context =
 		        new AnnotationConfigApplicationContext(configFile.class);
-Student std =(Student) context.getBean("stdId1");
+Student std =(Student) context.getBean(Student.class);
 std.display();
 }
 }
