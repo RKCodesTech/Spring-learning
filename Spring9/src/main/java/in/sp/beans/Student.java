@@ -1,8 +1,11 @@
 package in.sp.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Student {
 private String name;
 private int age;
+@Autowired           //do this for autowiring
 private Address address;
 public String getName() {
 	return name;
