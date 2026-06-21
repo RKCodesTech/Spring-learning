@@ -7,6 +7,7 @@ private String name;
 private int age;
 @Autowired           //do this for autowiring
 private Address address;
+private Subject subject;
 public String getName() {
 	return name;
 }

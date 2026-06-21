@@ -20,4 +20,10 @@ public Address obj2() {
 	adr.setPincode(123456789);
 	return adr;
 }
+@Bean
+public Subject obj3() {
+	Subject sbj=new Subject();
+	sbj.
+return sbj;
+}
 }
