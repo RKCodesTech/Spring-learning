@@ -14,7 +14,7 @@ public Student obj1() {
 	Student std = new Student ();
 	std .setName("Riya");
 	std.setAge(19);
-	std.setSubject(obj3);
+	std.setSubject(obj3());
 //	std.setAddress(obj2());  expect this injection see student.class
 	return std;
 }

@@ -13,4 +13,9 @@ public class Subject {
     public void setSubjects(List<String> subjects) {
         this.subjects = subjects;
     }
+    @Override
+    public String toString() {
+    	// TODO Auto-generated method stub
+    	return super.toString();
+    }
 }
