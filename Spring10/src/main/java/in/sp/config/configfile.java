@@ -1,5 +1,9 @@
 package in.sp.config;
 import in.sp.beans.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -23,7 +27,11 @@ public Address obj2() {
 @Bean
 public Subject obj3() {
 	Subject sbj=new Subject();
-	sbj.
+	List<String> Subject_List =new ArrayList<String>();
+	Subject_List.add("java");
+	Subject_List.add("Maths");
+	Subject_List.add("Python");
+	sbj.setSubjects(Subject_List);
 return sbj;
 }
 }
