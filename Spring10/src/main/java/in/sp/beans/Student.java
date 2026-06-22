@@ -30,5 +30,12 @@ public void display() {
 	System.out.println("Name: "+name);
 	System.out.println("Age: "+age);
 	System.out.println("Address: "+address);
+	System.out.println("Subjects: "+subject);
+}
+public Subject getSubject() {
+	return subject;
+}
+public void setSubject(Subject subject) {
+	this.subject = subject;
 }
 }

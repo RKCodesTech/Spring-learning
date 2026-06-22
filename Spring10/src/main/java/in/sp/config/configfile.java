@@ -14,6 +14,7 @@ public Student obj1() {
 	Student std = new Student ();
 	std .setName("Riya");
 	std.setAge(19);
+	std.setSubject(obj3);
 //	std.setAddress(obj2());  expect this injection see student.class
 	return std;
 }
@@ -23,6 +24,8 @@ public Address obj2() {
 	adr.setCityname("Indore");
 	adr.setPincode(123456789);
 	return adr;
+	
+	
 }
 @Bean
 public Subject obj3() {
