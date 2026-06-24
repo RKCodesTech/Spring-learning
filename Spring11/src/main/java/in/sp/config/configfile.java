@@ -20,7 +20,7 @@ public Address obj2() {
 	adr.setPincode(123456789);
 	return adr;
 }@Bean
-public Address ob3() {
+public Address obj3() {
 Address adrr= new Address();
 adrr.setCityname("Jhansi");
 adrr.setPincode(986532);
