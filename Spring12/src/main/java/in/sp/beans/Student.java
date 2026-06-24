@@ -29,4 +29,10 @@ public int getRollno() {
 public void setRollno(int rollno) {
 	this.rollno = rollno;
 }
+public void display() {
+	System.out.print("Name: "+name);
+	System.out.print("Email: "+email);
+	System.out.print("Roll No : "+rollno);
+	System.out.print("Address:  "+address);
+}
 }
