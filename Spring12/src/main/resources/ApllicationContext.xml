@@ -13,7 +13,7 @@
         <property name="rollno" value="1"/>
 
     </bean>
-    <bean id="StdId1" class="com.sp.beans.Student">
+    <bean id="S" class="com.sp.beans.Student">
         <property name="name" value="PRiya"/>
         <property name="email" value="Priya123@gmail.com"/>
         <property name="rollno" value="122"/>
