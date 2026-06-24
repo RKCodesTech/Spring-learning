@@ -19,5 +19,11 @@ public Address obj2() {
 	adr.setCityname("Indore");
 	adr.setPincode(123456789);
 	return adr;
+}]@Bean
+public Address ob3() {
+Address adrr= new Address();
+adrr.setCityname("Jhansi");
+adrr.setPincode(986532);
+return adrr;
 }
 }
