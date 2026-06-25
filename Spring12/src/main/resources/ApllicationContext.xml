@@ -6,12 +6,13 @@
        http://www.springframework.org/schema/beans
        https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="StdId" class="in.sp.beans.Student">
+    <bean id="StdId" class="in.sp.beans.Student" autowire="byName">// it means
 
         <property name="name" value="Riya"/>
         <property name="email" value="riya123@gmail.com"/>
         <property name="rollno" value="1"/>
-        <property name="address" ref="addr"/>
+        
+      
 
     </bean>
 
