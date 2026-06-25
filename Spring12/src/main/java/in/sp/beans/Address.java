@@ -17,7 +17,7 @@ public void setPincode(int pincode) {
 }
 @Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return super.toString();
+	
+		return "City Name: "+cityname +" Pincode : " +pincode;
 	}
 }
