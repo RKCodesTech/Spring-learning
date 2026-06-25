@@ -1,0 +1,3 @@
+when you have to achieve depedency by "byType" 
+byType means it will check, Is object of that variable is created or not means it'll match type like here
+it will check is bean object of address class is available or not..
