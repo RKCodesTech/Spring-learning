@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 public class Student {
 private String name;
 private int age;
-@Autowired           //do this for autowiring
-@Qualifier("obj3")// kis object ko inject krna hai
+@Autowired          
+@Qualifier("obj3")
 
 private Address address;
 public String getName() {
