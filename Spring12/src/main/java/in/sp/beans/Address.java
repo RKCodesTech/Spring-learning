@@ -15,4 +15,9 @@ public int getPincode() {
 public void setPincode(int pincode) {
 	this.pincode = pincode;
 }
+@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString();
+	}
 }
