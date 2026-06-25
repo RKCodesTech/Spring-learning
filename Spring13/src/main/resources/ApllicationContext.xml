@@ -6,7 +6,7 @@
        http://www.springframework.org/schema/beans
        https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="StdId" class="in.sp.beans.Student" autowire="byName">// it means
+    <bean id="StdId" class="in.sp.beans.Student" autowire="byName">
 
         <property name="name" value="Riya"/>
         <property name="email" value="riya123@gmail.com"/>
@@ -16,7 +16,13 @@
 
     </bean>
 
-    <bean id="addr" class="in.sp.beans.Address">
+    <bean id="addr" class="in.sp.beans.Address" autowire-candidate="false">
+
+        <property name="cityname" value="Indore" />
+        <property name="pincode" value="7885415"/>
+
+    </bean>
+    <bean id="addr2" class="in.sp.beans.Address">
 
         <property name="cityname" value="Indore"/>
         <property name="pincode" value="7885415"/>

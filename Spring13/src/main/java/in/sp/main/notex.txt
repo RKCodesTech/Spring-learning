@@ -6,4 +6,4 @@ it will check is bean object of address class is available or not..
 overall ye check krega ki address type se ky koi bean obj created hai ya nhi agr h to use inject kr dega
 
 
-and what if agr 2 object ho address class ke to vo kis object ko inject krega
+and what if agr 2 object ho address class ke to vo kis  object ko inject krega
