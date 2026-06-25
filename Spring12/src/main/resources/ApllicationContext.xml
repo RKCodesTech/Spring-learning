@@ -17,7 +17,7 @@
 
     <bean id="addr" class="in.sp.beans.Address">
 
-        <property name="cityName" value="Indore"/>
+        <property name="cityname" value="Indore"/>
         <property name="pincode" value="7885415"/>
 
     </bean>
