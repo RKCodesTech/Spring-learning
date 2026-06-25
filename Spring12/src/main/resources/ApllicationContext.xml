@@ -11,13 +11,15 @@
         <property name="name" value="Riya"/>
         <property name="email" value="riya123@gmail.com"/>
         <property name="rollno" value="1"/>
-         <property name="Address" ref="addr"/>
+        <property name="address" ref="addr"/>
 
     </bean>
+
     <bean id="addr" class="com.sp.beans.Address">
-        <property name="City name " value="Indore"/>
-        <property name="pincode " value=7885415/>
-      
+
+        <property name="cityName" value="Indore"/>
+        <property name="pincode" value="7885415"/>
+
     </bean>
 
 </beans>
