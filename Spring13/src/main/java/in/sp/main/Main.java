@@ -15,4 +15,4 @@ public class Main {
         Student std = context.getBean(Student.class);
         std.display();
     }
-}
+} 
