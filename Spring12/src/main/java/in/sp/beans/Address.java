@@ -13,7 +13,7 @@ public int getPincode() {
 	return pincode;
 }
 public void setPincode(int pincode) {
-	this.pincode = pincode;
+	this.pincode = pincode; 
 }
 @Override
 	public String toString() {
