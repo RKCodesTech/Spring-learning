@@ -1,9 +1,0 @@
-when you have to achieve depedency by "byType" see in ApplicationContext line no.9
-
-byType means it will check, Is object of that variable is created or not means it'll match type like here
-it will check is bean object of address class is available or not..
-
-overall ye check krega ki address type se ky koi bean obj created hai ya nhi agr h to use inject kr dega
-
-
-and what if agr 2 object ho address class ke to vo kis  object ko inject krega

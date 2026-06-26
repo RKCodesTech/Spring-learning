@@ -1,0 +1,7 @@
+to apply autowiring in xml files
+  <bean id="StdId" class="in.sp.beans.Student" autowire="byName"> write like this here object of Address class is
+  injecting in student class 
+  
+  byName is internally use setter dependency injection 
+   
+    

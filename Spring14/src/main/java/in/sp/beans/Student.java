@@ -1,14 +1,9 @@
 package in.sp.beans;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-
 public class Student {
 private String name;
-private int age;
-@Autowired          
-@Qualifier("obj3")
-
+private String email;
+private int rollno;
 private Address address;
 public String getName() {
 	return name;
@@ -16,21 +11,28 @@ public String getName() {
 public void setName(String name) {
 	this.name = name;
 }
-public int getAge() {
-	return age;
-}
-public void setAge(int age) {
-	this.age = age;
-}
 public Address getAddress() {
 	return address;
 }
 public void setAddress(Address address) {
 	this.address = address;
 }
+public String getEmail() {
+	return email;
+}
+public void setEmail(String email) {
+	this.email = email;
+}
+public int getRollno() {
+	return rollno;
+}
+public void setRollno(int rollno) {
+	this.rollno = rollno;
+}
 public void display() {
-	System.out.println("Name: "+name);
-	System.out.println("Age: "+age);
-	System.out.println("Address: "+address);
+	System.out.print("Name: "+name);
+	System.out.print("Email: "+email);
+	System.out.print("Roll No : "+rollno);
+	System.out.print("Address:  "+address);
 }
 }

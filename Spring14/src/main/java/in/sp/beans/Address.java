@@ -13,11 +13,11 @@ public int getPincode() {
 	return pincode;
 }
 public void setPincode(int pincode) {
-	this.pincode = pincode;
+	this.pincode = pincode; 
 }
 @Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return cityname +pincode;
+	
+		return "City Name: "+cityname +" Pincode : " +pincode;
 	}
 }
