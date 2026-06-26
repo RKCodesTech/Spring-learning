@@ -10,10 +10,7 @@
 
         <property name="name" value="Riya"/>
         <property name="email" value="riya123@gmail.com"/>
-        <property name="rollno" value="1"/>
-        
-       
-
+        <property name="rollno" value="1"/>     
     </bean>
 
     <bean id="addr" class="in.sp.beans.Address">
