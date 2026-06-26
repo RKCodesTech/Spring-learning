@@ -15,8 +15,13 @@
      
     </bean>
 
-    <bean id="addr" class="in.sp.beans.Address">
+    <bean id="addr" class="in.sp.beans.Address" autowire-candidate="false">
  <constructor-arg value= "Indore"/>
+  <constructor-arg value= "9865432"/>
+
+    </bean>
+        <bean id="addr1" class="in.sp.beans.Address">
+ <constructor-arg value= "Jhansi"/>
   <constructor-arg value= "9865432"/>
 
     </bean>

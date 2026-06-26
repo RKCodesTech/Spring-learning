@@ -1,7 +1,17 @@
 to apply autowiring in xml files
-  <bean id="StdId" class="in.sp.beans.Student" autowire="byName"> write like this here object of Address class is
-  injecting in student class 
-  
-  byName is internally use setter dependency injection 
-   
+using constructor 
+first remove setter and make constructor in classes then create bean object in xml file 
+
+    <bean id="addr" class="in.sp.beans.Address" autowire-candidate="false">// candidate false ka matlb hai jab multiple beans hogi address class kki to false likhne par vo bean ignore ho jayegi
+ <constructor-arg value= "Indore"/>
+  <constructor-arg value= "9865432"/>
+    </bean>
+     
+ like this 
+ 
+ 
+ then write this line in student bean object 
+    <bean id="StdId" class="in.sp.beans.Student" autowire="constructor">
     
+    
+   
