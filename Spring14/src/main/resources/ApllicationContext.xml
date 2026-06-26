@@ -8,15 +8,16 @@
 
     <bean id="StdId" class="in.sp.beans.Student" autowire="constructor">
 
-        <property name="name" value="Riya"/>
-        <property name="email" value="riya123@gmail.com"/>
-        <property name="rollno" value="1"/>     
+ <constructor-arg value= "Riya" index="0"/>
+  <constructor-arg value= "riya432" index="1"/>
+   <constructor-arg value="57438865" index= "2"/>
+
+     
     </bean>
 
     <bean id="addr" class="in.sp.beans.Address">
-
-        <property name="cityname" value="Indore"/>
-        <property name="pincode" value="7885415"/>
+ <constructor-arg value= "Indore"/>
+  <constructor-arg value= "9865432"/>
 
     </bean>
 
