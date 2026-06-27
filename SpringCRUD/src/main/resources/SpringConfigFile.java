@@ -6,7 +6,7 @@ public class SpringConfigFile {
 public DriverManagerDataSource myDataSource() {
 	DriverManagerDataSource datasource=new DriverManagerDataSource();
 	datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+	datasource.setUrl("jdbc:mysql://localhost:3306/);
 	return datasource; 
 }
 }
-s 
