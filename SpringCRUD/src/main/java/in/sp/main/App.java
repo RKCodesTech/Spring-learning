@@ -7,7 +7,7 @@ import in.sp.resources.SpringConfigFile;
 public class App {
 	int std_rollno=2345;
 	String std_name="Riya";
-	String std_marks=34547;
+	int std_marks=34547;
 public static void main (String[] args) {
 	ApplicationContext context=new AnnotationConfigApplicationContext(SpringConfigFile.class);
 	JdbcTemplate jdbcTemplate=context.getBean(JdbcTemplate.class);
@@ -20,3 +20,20 @@ public static void main (String[] args) {
 	}
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
