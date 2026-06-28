@@ -12,8 +12,8 @@ public DriverManagerDataSource myDataSource() {
 	DriverManagerDataSource datasource=new DriverManagerDataSource();
 	datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
 	datasource.setUrl("jdbc:mysql://localhost:3306/spring_jdbc_db");
-	datasource.getUsername("root");
-	datasource.getPassword("1234");
+	datasource.setUsername("root");
+	datasource.setPassword("1234");
 	return datasource; 
 }
 
