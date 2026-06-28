@@ -12,6 +12,11 @@ public static void main (String[] args) {
 	ApplicationContext context=new AnnotationConfigApplicationContext(SpringConfigFile.class);
 	JdbcTemplate jdbcTemplate=context.getBean(JdbcTemplate.class);
 	String insert_sqlQuery="INSERT INTO student VALUES(?,?,?)";
-	jdbcTemplate.update(insert_sqlQuery);
+	int count =jdbcTemplate.update(insert_sqlQuery, std_rollno,std_name,std_marks);
+	if(count>0) {
+		System.out.println("insertion success");
+	}else {
+		Su
+	}
 }
 }
