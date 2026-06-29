@@ -10,6 +10,7 @@ public static void main (String[] args) {
 	int std_rollno=2345;
 	String std_name="Riya";
 	int std_marks=34547;
+	
 	ApplicationContext context=new AnnotationConfigApplicationContext(SpringConfigFile.class);
 	JdbcTemplate jdbcTemplate=context.getBean(JdbcTemplate.class);
 	String insert_sqlQuery="INSERT INTO student VALUES(?,?,?)";
@@ -24,7 +25,7 @@ public static void main (String[] args) {
 
 
 
-
+ 
 
 
 
