@@ -1,41 +1,36 @@
 package in.sp.main;
-import in.sp.config.*;
+
+import in.sp.config.SpringConfigFile;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 
 public class Main {
 
-public static void main (String[] args) {
-	int std_rollno=2345;
-	String std_name="Riya";
-	int std_marks=34547;
-	
-	ApplicationContext context=new AnnotationConfigApplicationContext(SpringConfigFile.class);
-	JdbcTemplate jdbcTemplate=context.getBean(JdbcTemplate.class);
-	String insert_sqlQuery="INSERT INTO student VALUES(?,?,?)";
-	int count =jdbcTemplate.update(insert_sqlQuery, std_rollno,std_name,std_marks);
-	if(count>0) {
-		System.out.println("insertion success");
-	}else {
-		System.out.println("insertion failed");
-	}
+    public static void main(String[] args) {
+
+        ApplicationContext context =
+                new AnnotationConfigApplicationContext(SpringConfigFile.class);
+
+        // Get Bean
+        NamedParameterJdbcTemplate npjtemplate =
+                context.getBean("namedParameterJdbcTemplate", NamedParameterJdbcTemplate.class);
+
+        // Parameters
+        MapSqlParameterSource params = new MapSqlParameterSource();
+        params.addValue("rollno", "101");
+        params.addValue("name", "Riya");
+        params.addValue("marks", "95");
+
+        String query = "INSERT INTO student VALUES(:rollno, :name, :marks)";
+
+        int count = npjtemplate.update(query, params);
+
+        if (count > 0) {
+            System.out.println("Data Inserted Successfully");
+        } else {
+            System.out.println("Data Not Inserted");
+        }
+    }
 }
-}
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
