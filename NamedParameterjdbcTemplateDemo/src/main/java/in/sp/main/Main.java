@@ -3,8 +3,8 @@ package in.sp.main;
 import in.sp.config.SpringConfigFile;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 public class Main {
 
@@ -13,17 +13,15 @@ public class Main {
         ApplicationContext context =
                 new AnnotationConfigApplicationContext(SpringConfigFile.class);
 
-        // Get Bean
         NamedParameterJdbcTemplate npjtemplate =
-                context.getBean("namedParameterJdbcTemplate", NamedParameterJdbcTemplate.class);
+                context.getBean(NamedParameterJdbcTemplate.class);
 
-        // Parameters
+        String query = "INSERT INTO student (std_rollno, std_name, std_marks) VALUES (:rollno, :name, :marks)";
+
         MapSqlParameterSource params = new MapSqlParameterSource();
         params.addValue("rollno", "101");
         params.addValue("name", "Riya");
         params.addValue("marks", "95");
-
-        String query = "INSERT INTO student VALUES(:rollno, :name, :marks)";
 
         int count = npjtemplate.update(query, params);
 

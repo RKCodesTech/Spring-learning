@@ -10,16 +10,21 @@ public class SpringConfigFile {
 
     @Bean
     public DriverManagerDataSource myDataSource() {
+
         DriverManagerDataSource datasource = new DriverManagerDataSource();
+
         datasource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         datasource.setUrl("jdbc:mysql://localhost:3306/spring_jdbc_db");
         datasource.setUsername("root");
         datasource.setPassword("1234");
+
         return datasource;
     }
 
     @Bean
-    public NamedParameterJdbcTemplate namedpara() {
+    public NamedParameterJdbcTemplate namedParameterJdbcTemplate() {
+
         return new NamedParameterJdbcTemplate(myDataSource());
+
     }
 }
