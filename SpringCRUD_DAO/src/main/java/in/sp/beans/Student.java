@@ -1,4 +1,4 @@
-package in.sp.main;
+package in.sp.beans;
 
 public class Student {
 
