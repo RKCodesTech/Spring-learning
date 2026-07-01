@@ -21,6 +21,6 @@ public DriverManagerDataSource Datasource() {
 @Bean
 public JdbcTemplate myjdbctemplate() {
 	JdbcTemplate jdbcTemplate=new JdbcTemplate();
-	jdbcTemplate.setDataSource(DataSource());
+	jdbcTemplate.setDataSource(Datasource());
 }
 }
