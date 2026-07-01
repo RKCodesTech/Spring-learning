@@ -22,5 +22,6 @@ public DriverManagerDataSource Datasource() {
 public JdbcTemplate myjdbctemplate() {
 	JdbcTemplate jdbcTemplate=new JdbcTemplate();
 	jdbcTemplate.setDataSource(Datasource());
+	return jdbcTemplate;
 }
 }
