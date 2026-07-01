@@ -10,7 +10,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 @Configuration
 public class SpringConfigFile {
 @Bean
-public DriverManagerDataSource Datasource() {
+public DriverManagerDataSource myDatasource() {
 	DriverManagerDataSource drivermanager=new DriverManagerDataSource();
 	drivermanager.setDriverClassName("com.mysql.cj.jdbc.Driver");
 	drivermanager.setUrl("jdbc:mysql://localhost:3306/spring_jdbc_db");
@@ -21,7 +21,7 @@ public DriverManagerDataSource Datasource() {
 @Bean
 public JdbcTemplate myjdbctemplate() {
 	JdbcTemplate jdbcTemplate=new JdbcTemplate();
-	jdbcTemplate.setDataSource(Datasource());
+	jdbcTemplate.setDataSource(myDatasource());
 	return jdbcTemplate;
 }
 }
