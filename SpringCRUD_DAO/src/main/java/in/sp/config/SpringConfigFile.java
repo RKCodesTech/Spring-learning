@@ -25,7 +25,7 @@ public JdbcTemplate myjdbctemplate() {
 	return jdbcTemplate;
 }
 @Bean
-public StudentDAO studentdao() {
-return new StudentDAO(myjdbctemplate());
+public StudenDAO studentdao() {
+return new StudenDAO(myjdbctemplate());
 }
 }

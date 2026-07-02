@@ -9,5 +9,7 @@ public class StudenDAO {
 	private JdbcTemplate myjdbcTemplate;
 public StudenDAO(JdbcTemplate myJdbcTemplate) {
  this.myjdbcTemplate=myjdbcTemplate;
+
 }
+String sql="INSERT VALUES INTO"
 }
