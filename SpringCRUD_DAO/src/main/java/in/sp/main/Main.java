@@ -9,7 +9,7 @@ import in.sp.config.SpringConfigFile;
 public class Main {
 	public static void main(String[]args) {
 ApplicationContext context=new AnnotationConfigApplicationContext(SpringConfigFile.class);
-StudenDAO dao=context.getBean(StudetDAO.class);
+StudenDAO dao=context.getBean(StudenDAO.class);
 Student std=new Student();
 std.setStd_rollno(2345);
 std.setStd_name("Ritesh Kosta");
