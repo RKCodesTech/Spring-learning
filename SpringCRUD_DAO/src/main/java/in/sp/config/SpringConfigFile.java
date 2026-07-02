@@ -1,5 +1,5 @@
 package in.sp.config;
-
+import in.sp.dao.*;
 import javax.sql.DataSource;
 
 import org.springframework.context.annotation.Bean;
@@ -23,5 +23,9 @@ public JdbcTemplate myjdbctemplate() {
 	JdbcTemplate jdbcTemplate=new JdbcTemplate();
 	jdbcTemplate.setDataSource(myDatasource());
 	return jdbcTemplate;
+}
+@Bean
+public StudentDAO studentdao() {
+return new StudentDAO(myjdbctemplate());
 }
 }
