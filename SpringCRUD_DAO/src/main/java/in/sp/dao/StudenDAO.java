@@ -1,18 +1,22 @@
-package in.sp.dao;
-import in.sp.config.*;
-import javax.sql.DataSource;
+	package in.sp.dao;
+	import in.sp.config.*;
+	import javax.sql.DataSource;
+	import in.sp.beans.*;
+	import org.springframework.jdbc.core.JdbcTemplate;
+	
+	
+	public class StudenDAO {
+		private JdbcTemplate myjdbcTemplate;
+	public StudenDAO(JdbcTemplate myJdbcTemplate) {
+	 this.myjdbcTemplate=myjdbcTemplate;
 
-import org.springframework.jdbc.core.JdbcTemplate;
-
-
-public class StudenDAO {
-	private JdbcTemplate myjdbcTemplate;
-public StudenDAO(JdbcTemplate myJdbcTemplate) {
- this.myjdbcTemplate=myjdbcTemplate;
-
-}
-String sql="INSERT INTO student VALLUES(?,?,?)";
-String std_name="Riya kosta";
-int std_rollno=2345;
-int std_marks=234;
-}
+	
+	}
+	public int insertStudent(Student student) {
+	
+	
+	String sql="INSERT INTO student VALUES(?,?,?)";
+	
+	return myjdbcTemplate.update(sql,student.getStd_rollno(),student.getStd_name(),student.getStd_marks());
+	}
+	}
