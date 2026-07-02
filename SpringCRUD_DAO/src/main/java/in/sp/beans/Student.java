@@ -1,25 +1,24 @@
 package in.sp.beans;
 
 public class Student {
-int rollno;
-String name;
-public int getRollno() {
-	return rollno;
+int std_rollno;
+String std_name;
+int std_marks;
+public int getStd_rollno() {
+	return std_rollno;
 }
-public void setRollno(int rollno) {
-	this.rollno = rollno;
+public void setStd_rollno(int std_rollno) {
+	this.std_rollno = std_rollno;
 }
-public String getName() {
-	return name;
+public String getStd_name() {
+	return std_name;
 }
-public void setName(String name) {
-	this.name = name;
+public void setStd_name(String std_name) {
+	this.std_name = std_name;
 }
-public int getAge() {
-	return age;
+public int getStd_marks() {
+	return std_marks;
 }
-public void setAge(int age) {
-	this.age = age;
-}
-int age;
+public void setStd_marks(int std_marks) {
+	this.std_marks = std_marks;
 }
