@@ -4,8 +4,10 @@ import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 
+
 public class StudenDAO {
-public StudenDAO() {
-JdbcTemplate myjdbcJdbcTemplate
+	private JdbcTemplate myjdbcTemplate;
+public StudenDAO(JdbcTemplate myJdbcTemplate) {
+ this.myjdbcTemplate=myjdbcTemplate;
 }
 }
