@@ -11,5 +11,8 @@ public StudenDAO(JdbcTemplate myJdbcTemplate) {
  this.myjdbcTemplate=myjdbcTemplate;
 
 }
-String sql="INSERT VALUES INTO"
+String sql="INSERT INTO student VALLUES(?,?,?)";
+String std_name="Riya kosta";
+int std_rollno=2345;
+int std_marks=234;
 }
