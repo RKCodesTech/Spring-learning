@@ -7,8 +7,9 @@
 	
 	public class StudenDAO {
 		private JdbcTemplate myjdbcTemplate;
-	public StudenDAO(JdbcTemplate myJdbcTemplate) {
+	public StudenDAO(JdbcTemplate myjdbcTemplate) {
 	 this.myjdbcTemplate=myjdbcTemplate;
+
 
 	
 	}

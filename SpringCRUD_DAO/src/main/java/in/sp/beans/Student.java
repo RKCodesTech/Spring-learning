@@ -22,3 +22,4 @@ public int getStd_marks() {
 public void setStd_marks(int std_marks) {
 	this.std_marks = std_marks;
 }
+}

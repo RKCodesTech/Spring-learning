@@ -14,7 +14,13 @@ Student std=new Student();
 std.setStd_rollno(2345);
 std.setStd_name("Ritesh Kosta");
 std.setStd_marks(43543);
-
-
+int count=dao.insertStudent(std);
+if(count>0) {
+	System.out.println("insertion sucessfull");
+}
+else {
+	System.out.println("insertion failed");
+}
+System.out.println(dao);
 }
 }
