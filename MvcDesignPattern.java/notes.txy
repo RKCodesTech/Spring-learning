@@ -1,2 +1,11 @@
 design pattern are reusable solution for common desing problem it provide a proper way to create project
 it enhance code structure ,scalability in web dev.
+some imp ex:
+sigleton Design Pattern
+Factory method design pattern
+dao design pattern 
+mvc design pattern
+
+M-model(use to store data)
+V-View used for forntend and presentation
+C-controller (backend)
