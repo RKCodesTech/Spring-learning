@@ -8,4 +8,4 @@ mvc design pattern
 
 M-model(use to store data)
 V-View used for forntend and presentation
-C-controller (backend)
+C-controller (backnend)
