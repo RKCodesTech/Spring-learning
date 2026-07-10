@@ -8,4 +8,8 @@ mvc design pattern
 
 M-model(use to store data)
 V-View used for forntend and presentation
-C-controller (backnend)
+C-controller (backend)
+
+client(login page) <-> Controller <-> model(java classes)<->database
+	|						|
+	<---_______________view(JSP)
