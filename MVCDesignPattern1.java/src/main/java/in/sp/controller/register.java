@@ -1,5 +1,8 @@
 package in.sp.controller;
 
-public class register {
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+@WebServlet("/Register")
+public class register extends HttpServlet {
 
 }
