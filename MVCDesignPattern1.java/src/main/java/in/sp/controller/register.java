@@ -12,7 +12,7 @@ public class register extends HttpServlet {
 protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws jakarta.servlet.ServletException ,java.io.IOException {
 	String myname=req.getParameter("name1");
 	String myemail=req.getParameter("email1");
-	int mypass=req.getParameter("password");
+	String mypass=req.getParameter("password");
 }
 }
 ;
