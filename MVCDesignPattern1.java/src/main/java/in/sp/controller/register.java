@@ -22,28 +22,21 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws j
 	String mypass=req.getParameter("password");
 	try {
 		
-	Connection con=DbConnection.getConnection();//        call connection method from Dbconnnection to connect database
-		String sql_query="INSERT INTO register VALUES(?,?,?)";
-		PreparedStatement ps=con.prepareStatement(sql_query);// to execute sql queries
-		ps.setString(1,myname );
-		ps.setString(2,myemail );
-		ps.setString(3,mypass );
+		Connection con = DbConnection.getConnection();
+		System.out.println("Connection = " + con);
+
+		String sql_query = "INSERT INTO register(name,email,password) VALUES(?,?,?)";
+
+		PreparedStatement ps = con.prepareStatement(sql_query);
+
+		ps.setString(1, myname);
+		ps.setString(2, myemail);
+		ps.setString(3, mypass);
+
+		int count = ps.executeUpdate();
+
+		System.out.println("Rows Inserted = " + count);
 		
-		int count=ps.executeUpdate();		
-		if(count>0) {
-			PrintWriter out = resp.getWriter();
-			out.println("<h3>Registration Successfully</h3>");
-
-			RequestDispatcher rd = req.getRequestDispatcher("/login.html");
-			rd.include(req, resp);
-		}
-		else {	
-			PrintWriter out = resp.getWriter();
-			out.println("<h3>Registration Failed</h3>");
-
-			RequestDispatcher rd = req.getRequestDispatcher("/login.html");
-			rd.include(req, resp);
-		} 
 	} catch (Exception e) {	
 		// TODO: handle exception
 		e.printStackTrace();	
