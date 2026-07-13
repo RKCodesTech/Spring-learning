@@ -1,5 +1,6 @@
 package in.sp.controller;
 
+import java.io.PrintWriter;
 import java.net.http.HttpRequest;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -30,16 +31,16 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws j
 		
 		int count=ps.executeUpdate();		
 		if(count>0) {
-			out.println("<h3>Registeration successfully</h3>");
-			RequestDispatcher rs=req.getRequestDispatcher("/login.html");
-			rs.include(req,res);
+			PrintWriter out=resp.getWriter();
+			RequestDispatcher rd=req.getRequestDispatcher("/login.html");
+			rd.include(req,resp);
 		}
 		else {	
 			System.out.print("Registeration Failed");
 		}
 	} catch (Exception e) {
 		// TODO: handle exception
-		e.printStackTrace();
+		e.printStackTrace();	
 	}
 }
 }
