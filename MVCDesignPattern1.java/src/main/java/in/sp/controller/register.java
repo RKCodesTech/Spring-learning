@@ -31,14 +31,20 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws j
 		
 		int count=ps.executeUpdate();		
 		if(count>0) {
-			PrintWriter out=resp.getWriter();
-			RequestDispatcher rd=req.getRequestDispatcher("/login.html");
-			rd.include(req,resp);
+			PrintWriter out = resp.getWriter();
+			out.println("<h3>Registration Successfully</h3>");
+
+			RequestDispatcher rd = req.getRequestDispatcher("/login.html");
+			rd.include(req, resp);
 		}
 		else {	
-			System.out.print("Registeration Failed");
-		}
-	} catch (Exception e) {
+			PrintWriter out = resp.getWriter();
+			out.println("<h3>Registration Failed</h3>");
+
+			RequestDispatcher rd = req.getRequestDispatcher("/login.html");
+			rd.include(req, resp);
+		} 
+	} catch (Exception e) {	
 		// TODO: handle exception
 		e.printStackTrace();	
 	}
