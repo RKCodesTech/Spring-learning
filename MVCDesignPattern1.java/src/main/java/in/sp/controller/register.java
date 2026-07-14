@@ -17,15 +17,11 @@ import java.sql.PreparedStatement;
 public class register extends HttpServlet {
 @Override
 protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws jakarta.servlet.ServletException ,java.io.IOException {
-	System.out.println("Method = " + req.getMethod());
-	System.out.println("Content-Type = " + req.getContentType());
-	System.out.println("Parameter Map = " + req.getParameterMap().size());
+
 	String myname=req.getParameter("name1");
 	String myemail=req.getParameter("email1");
 	String mypass=req.getParameter("password");
-	System.out.println("Name = " + myname);
-	System.out.println("Email = " + myemail);
-	System.out.println("Password = " + mypass);
+
 	try {
 		PrintWriter out=resp.getWriter();// to println html content 
 		resp.setContentType("text");
