@@ -10,7 +10,7 @@ You edited register.html, but Tomcat was still using an old version.--%>
 Name:
 <input type="text" name="name1"><br><br>
 
-Email:                                         /
+Email:                                         
 <input type="email" name="email1"><br><br>
 
 Password:
