@@ -43,7 +43,7 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws j
 		if(count>0) {
 		
 			out.println("Register Sucessfully");
-			RequestDispatcher rd= req.getRequestDispatcher("/login.htm");
+			RequestDispatcher rd= req.getRequestDispatcher("/login.jsp");
 		}else {
 			out.println("Registeration Failed");
 		}

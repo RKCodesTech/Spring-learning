@@ -11,33 +11,47 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;          //mvc_db databse name
+import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/LoginForm")
 public class login extends HttpServlet {
-@Override
-protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	PrintWriter out=resp.getWriter();
-	resp.setContentType("Text");
-	String myemail=req.getParameter("email1");
-	String mypass=req.getParameter("pass1");
-	try {
-		Connection con=DbConnection.getConnection();
-		String sql_Query="SELECT * FROM register WHERE email=? 	AND password=?";
-		PreparedStatement ps= con.prepareStatement(sql_Query);
-		ps.setString(1, myemail);
-		ps.setString(2, mypass);
-		ResultSet rs=ps.executeQuery();
-		if(rs.next()) {
-			
-		}else {
-			out.println("worng email or password ");
-		}
-		
-	} catch (Exception e) {
-		// TODO: handle exception
-	e.printStackTrace();
-	}
-	super.doPost(req, resp);
-}
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+
+        resp.setContentType("text");
+        PrintWriter out = resp.getWriter();
+
+        String myemail = req.getParameter("email1");
+        String mypass = req.getParameter("pass1");
+
+        try {
+            Connection con = DbConnection.getConnection();
+
+            String sql = "SELECT * FROM register WHERE email = ? AND password = ?";
+
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1, myemail);
+            ps.setString(2, mypass);
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                out.println("<h2>Login Successful</h2>");
+                // Uncomment the line below if you want to redirect
+                // resp.sendRedirect("home.jsp");
+            } else {
+                out.println("<h2>Wrong Email or Password!</h2>");
+            }
+
+            rs.close();
+            ps.close();
+            con.close();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            out.println("<h2>Something went wrong!</h2>");
+        }
+    }
 }
