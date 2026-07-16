@@ -7,12 +7,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import in.sp.DB.DbConnection;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-
+import jakarta.servlet.http.HttpSession;
+import in.sp.model.*;
 @WebServlet("/LoginForm")
 public class login extends HttpServlet {
 
@@ -39,8 +41,12 @@ public class login extends HttpServlet {
 
             if (rs.next()) {
                 out.println("<h2>Login Successful</h2>");
-                // Uncomment the line below if you want to redirect
-                // resp.sendRedirect("home.jsp");
+                User user=new User();
+                user.setName(rs.getString("name"));
+                user.setEmail(rs.getString("email")); 	
+                HttpSession  session =req.getSession();
+                session.setAttribute("seession_user", session);
+                RequestDispatcher
             } else {
                 out.println("<h2>Wrong Email or Password!</h2>");
             }
