@@ -50,6 +50,7 @@ public class login extends HttpServlet {
                 rd.forward(req, resp);
             } else {
                 out.println("<h2>Wrong Email or Password!</h2>");
+                out.print("Please enter correct Password");
             }
 
             rs.close();
