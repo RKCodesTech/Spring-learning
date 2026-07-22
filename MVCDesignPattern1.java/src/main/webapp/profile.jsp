@@ -27,6 +27,7 @@
 
 <br><br>
 
+<a href="Notes.jsp"> view Notes</a><br><br>
 <a href="Logout">Logout</a>
 
 </body>

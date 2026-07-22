@@ -47,6 +47,7 @@ public class login extends HttpServlet {
                 HttpSession  session =req.getSession();
                 session.setAttribute("session_user", user);
                 RequestDispatcher rd = req.getRequestDispatcher("/profile.jsp");
+                
                 rd.forward(req, resp);
             } else {
                 out.println("<h2>Wrong Email or Password!</h2>");

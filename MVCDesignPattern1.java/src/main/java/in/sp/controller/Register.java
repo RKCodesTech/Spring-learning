@@ -58,7 +58,7 @@ public class Register extends HttpServlet {
 
             e.printStackTrace();
             out.println("<h2>Something went wrong!</h2>");
-        }
+        } 
 
     }
 

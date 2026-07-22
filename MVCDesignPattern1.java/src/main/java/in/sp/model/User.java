@@ -6,7 +6,7 @@ public class User {
     private String email;
 
     // Default Constructor
-    public User() {
+    public User() {	
 
     }
 
