@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.riya</groupId>
-    <artifactId>SpringWebMvc1</artifactId>
+    <artifactId>SpringwebMc1</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
 
@@ -65,7 +65,7 @@
 
 
     <build>
-        <finalName>SpringWebMvc1</finalName>
+        <finalName>SpringMVCProject</finalName>
 
         <plugins>
 
