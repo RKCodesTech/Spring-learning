@@ -14,3 +14,4 @@ public ModelAndView openHelloPage() {
 	return mav;
 }
 }
+					
