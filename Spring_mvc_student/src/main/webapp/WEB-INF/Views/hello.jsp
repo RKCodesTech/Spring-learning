@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>hello page</title>
+<title>Student Management </title>
 </head>
 <body>
 <h1> This is hello page</h1>
