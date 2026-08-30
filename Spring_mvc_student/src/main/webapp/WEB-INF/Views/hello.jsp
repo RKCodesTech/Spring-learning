@@ -7,6 +7,7 @@
 <title>Student Management </title>
 </head>
 <body>
+<h1>Welcome ${name }</h1>
 <h1> This is hello page</h1>
 </body>
 </html>
