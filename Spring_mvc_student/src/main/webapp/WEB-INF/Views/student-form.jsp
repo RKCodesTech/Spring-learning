@@ -4,9 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Add student </title>
 </head>
 <body>
-
+<form action="student" method="post"></form>
+Name
+<input type="text" name="name">
+ Roll No:
+ <input type="number" name="Rollno">
+ Marks:
+ <input type="number" name="mark">
+ <br></br>
+ <input type ="submit" value="Add Student"> 
 </body>
 </html>
