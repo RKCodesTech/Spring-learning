@@ -7,14 +7,21 @@
 <title>Add student </title>
 </head>
 <body>
-<form action="student" method="post"></form>
+<form action="student" method="post">
 Name
 <input type="text" name="name">
  Roll No:
  <input type="number" name="rollno">
  Marks:
- <input type="number" name="mark">
+ <input type="number" name="marks">
  <br></br>
- <input type ="submit" value="Add Student"> 
+ <input type ="submit" value="Add Student">
+</form>
+ <p>Name: ${name }</p>
+ <p>Rollno. : ${rollno }</p>
+ <p>Marks : ${marks }</p>
+ 
+ 
+ 
 </body>
 </html>

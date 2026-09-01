@@ -30,5 +30,4 @@ model.addAttribute("name", name);
 model.addAttribute("rollno",rollno);
 model.addAttribute("marks" , marks);
 	return "student-form";
-
 }
