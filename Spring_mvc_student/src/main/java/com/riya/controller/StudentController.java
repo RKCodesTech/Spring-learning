@@ -24,8 +24,11 @@ public class StudentController {
 public String addStudent(
 		@RequestParam("name") String name,
 		@RequestParam("rollno") int rollno,
-		@RequestParam("marks") int marks
-		) {
+		@RequestParam("marks") int marks,
+		Model model) {
+model.addAttribute("name", name);
+model.addAttribute("rollno",rollno);
+model.addAttribute("marks" , marks);
 	return "student-form";
-}
+
 }
