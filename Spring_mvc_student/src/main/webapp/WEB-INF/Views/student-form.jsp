@@ -11,7 +11,7 @@
 Name
 <input type="text" name="name">
  Roll No:
- <input type="number" name="Rollno">
+ <input type="number" name="rollno">
  Marks:
  <input type="number" name="mark">
  <br></br>
