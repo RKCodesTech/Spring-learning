@@ -1,4 +1,3 @@
-```java
 package com.riya.controller;
 
 import org.springframework.stereotype.Controller;
@@ -35,4 +34,3 @@ public class StudentController {
         return "student-form";
     }
 }
-```
